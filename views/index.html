@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WAV upload</title>
+  <!-- Latest compiled and minified CSS -->
+  <style type="text/css">
+    body {background-color: #cccccc;}
+    .container {width: 300px; margin: auto; margin-top: 100px;}
+    .suppressed {text-decoration: line-through;}
+  </style>
+</head>
+<body>
+    <div class="container">
+        <button id="start-record">Record</button>
+        <button id="stop-record">Stop</button>
+        <span id="recording-status" style="display: none;">Recording</span>
+        <br />
+        <button id="reset">Reset</button>
+        <hr />
+        <button id="start-playback">Play</button>
+        <button id="stop-playback">End</button>
+        <span id="playback-status" style="display: none;">Playing - <span id="outstanding-request-count">0</span></span>
+        <br />
+        <select id="playback-device-select"></select>
+        <input id="playback-channel" type="number" value="0" />
+        <br />
+        <input type="range" id="overlapping-samples" name="overlapping-samples" min="1" max="12" />
+        <label for="overlapping-samples">Overlapping samples - <span id="overlapping-samples-val"></span></label>
+        <input type="range" id="sample-length" name="sample-length" min="100" max="5000" />
+        <label for="sample-length">Sample length (ms) - <span id="sample-length-val"></span></label>
+        <div id="aggregates"></div>
+    </div>
+    <script src="/assets/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/lib/recorder.js"></script>
+    <script type="text/javascript" src="/assets/js/app.js"></script>
+</body>
+</html>
