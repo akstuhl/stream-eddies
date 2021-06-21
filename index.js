@@ -247,7 +247,7 @@ app.post('/upload_sample', function (req, res) {
 });
 
 app.get('/aggregates', function(req, res) {
-  res.status(200).json({aggregates: aggregates, picks: picks});  
+  res.status(200).json({aggregates: aggregates, picks: picks});
 });
 
 app.listen(app.get('port'), function() {
