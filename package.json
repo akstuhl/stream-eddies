@@ -11,7 +11,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "file-type": "^10.7.0",
+    "file-type": "^16.5.4",
     "formidable": "^1.2.1",
     "read-chunk": "^3.0.0",
     "request": "^2.88.0"
